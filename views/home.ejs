@@ -182,12 +182,12 @@ color: white;
 
     <div class="box">
 <h1 style="--clr:#9c27b0"><a href="" data-text="&nbsp;Home">&nbsp;Home&nbsp;</a></h1>
-<p><%= content %><a  href="/compose" target="_blank" style="font-family: sans-serif;">Get Started...</a></p>
+<p><%= startingContent %><a  href="/compose" target="_blank" style="font-family: sans-serif;">Get Started...</a></p>
 </div>
 <% posts.forEach(function(post) {%>
   <div class="item">
-<h2 style="--clr:#00ade1"><a href="/post/<%= post.title %>" data-text="&nbsp;<%= post.title %>">&nbsp;<%= post.title %>&nbsp;</a></h2>
-<p><%= post.content.substring(0,100)  %>.... <a href="/post/<%= post.title %>">Read More</a></p>
+<h2><a href="/post/<%=post._id%>">&nbsp;<%= post.title %>&nbsp;</a></h2>
+<p><%= post.content.substring(0,100)  %>.... <a href="/post/<%=post._id%>">Read More</a></p>
 </div>
 <% }); %>
 
